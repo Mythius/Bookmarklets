@@ -4,6 +4,7 @@ include('https://cdn.jsdelivr.net/gh/Mythius/Bookmarklets@master/helpers.js');
 include('https://cdn.jsdelivr.net/gh/Mythius/Bookmarklets@master/player.js');
 var element=document.createElement('img');
 element.src='https://media.tenor.com/images/0791eb3858075aca85eed5ecfe08c778/tenor.gif';
+setTimeout(function(){
 var player=new Player(element);
 Object.prototype.goTo=function(x,y){
     this.style.left=x+'px';
@@ -24,4 +25,4 @@ function include(link){
     var s=document.createElement('script');
     s.src=link;
     document.body.appendChild(s);
-}
+}},100);
